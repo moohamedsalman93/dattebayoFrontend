@@ -8,7 +8,7 @@ const Card = ({ hit, hanldeOnClick, index, isShow }) => {
   return (
     <div key={hit.id} className=" h-32 flex w-[11rem]  xl:w-[16rem] bg-white m-1 xl:m-3 items-center p-2 rounded-lg shadow-lg border " onClick={() => hanldeOnClick(index)}>
 
-      {isShow ? <img src={`http://146.190.42.50/jmc/Photo/${profile}.jpg`} alt={''} className=" h-16 w-16 xl:h-24 xl:w-24 rounded object-fill" />
+      {isShow ? <img src={`https://dattebayo-proxy.onrender.com/proxy?regno=${profile}`} alt={''} className=" h-16 w-16 xl:h-24 xl:w-24 rounded object-fill" />
         : <div className=" h-16 w-16 xl:h-24 xl:w-24 rounded object-fill"></div>}
       <div className="p-2">
         <h1 className=" text-sm xl:text-base font-semibold h-12 text-ellipsis overflow-hidden ">{hit.name}</h1>
@@ -328,7 +328,7 @@ function App() {
                   onMouseUp={() => setShowImage(false)}
                 >
                   <img 
-                    src={`http://146.190.42.50/jmc/Photo/${getData[isView].regno.split(" ")[1]}.jpg`} 
+                    src={`https://dattebayo-proxy.onrender.com/proxy?regno=${getData[isView].regno.split(" ")[1]}`} 
                     alt="" 
                     className={`w-[20rem] h-[25rem] ${showImage || isShow ? '' : 'hidden'}`} 
                   />
